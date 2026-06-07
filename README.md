@@ -22,5 +22,5 @@ angular_monotonicity # Penalizes larger angles being louder than smaller angles.
 
 You can also set a max_width_mm and max_height_mm to punish waveguides that are bigger than your design allows for.
 
-Lastly you can set the PSO parameters: cognitive coefficient c1, social coefficien c2, inertia weight w, the particle amount and the iterations. c1, c2 and w have good default values.
+Lastly you can set the PSO parameters: cognitive coefficient c1, social coefficien c2, inertia weight w, the particle amount and the iterations.
 
