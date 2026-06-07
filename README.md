@@ -9,11 +9,17 @@ There are different Values that need to be set, so that the algorithm runs to yo
 
 Then there are the ObjectiveWeights. The objective function uses multiple scores on multiple polar planes to evaluate the frequency response of the waveguide driver combination. It evaluates 4 planes from vertical to horizonal and then looks at the frequency response from 10 to 60 degrees in 10 degree steps. The different planes (horizontal, vertical and in between) can be custom weighted. The listening angles can be weighted as well - for example giving the inner angles more weight.
 The main scoring functions are
+
 tonal_balance        # Keeps off-axis tonal shape similar to 0° after removing average level loss.
+
 freq_rise            # Penalizes response rising with frequency; falling/flat is allowed.
+
 freq_ripple          # Penalizes narrow frequency ripple using second frequency difference.
+
 angular_smoothness=  # Penalizes sudden angular jumps using second angle difference.
+
 angular_monotonicity # Penalizes larger angles being louder than smaller angles.
+
 You can also set a max_width_mm and max_height_mm to punish waveguides that are bigger than your design allows for.
 
 Lastly you can set the PSO parameters: cognitive coefficient c1, social coefficien c2, inertia weight w, the particle amount and the iterations. c1, c2 and w have good default values.
